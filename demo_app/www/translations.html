@@ -1,0 +1,19 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<p>context['test']: {{ test }}</p>
+<p>html static paragraph tag: ERPNext is cool but frappe is confusing</p>
+<h3>List of Translations</h3>
+<table class="table">
+    <tr>
+        <th>Source</th>
+        <th>To</th>
+    </tr>
+    {% for translation in translations %}
+    <tr>
+        <td>{{ translation.source }}</td>
+        <td>{{ translation.to }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
